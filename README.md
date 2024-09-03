@@ -1,2 +1,2 @@
 # webdev24
-Notes for Web Dev Fall 2024
+notes for web dev fall 2024
