@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- this specifies the character set encoding.
+     without this tag our fonts might not load properly -->
+    <meta charset="utf-8" />
+    <!-- the viewport tag sets the initial scale and ensures
+     proper responsive behavior -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The title tag shows up in the browser tab and as the big blue link in search results -->
+    <title>HTML Form Elements</title>
+    <style>
+      p,
+      fieldset {
+        font-family: "Courier New";
+        color: rgb(0, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <!-- target self means load new link in same browser tab -->
+      <!-- target blank means new tab -->
+      Here is a form containing basic input types. For more info
+      <a
+        href="https://www.w3schools.com/html/html_form_elements.asp"
+        target="_blank"
+        >review notes at w3schools.</a
+      >
+    </p>
+    <!-- action = where to send data from form - maybe calculate.js or a database api endpoint -->
+    <!-- method = how -->
+    <!-- name form so script can identify it and know where to process data -->
+    <!-- target _blank or _self, self reloads same page once form submits -->
+    <form action="#" method="POST" name="sampleForm" target="_self">
+      <p>
+        You can put any HTML inside a form element, but you should stick to
+        images and text that give instructions about how to complete your form.
+      </p>
+      <fieldset>
+        <legend><b>Simple Text Input</b></legend>
+        <p>
+          The box and title of the form group are created by the fieldset and
+          legend tags ~
+        </p>
+        <label for="FirstName">First Name</label>
+        <input
+          type="text"
+          name="FirstName"
+          placeholder="First Name"
+          id="FirstName"
+          required
+        />
+        <p>
+          This text input has a character length capped at 15 and placeholder
+          text
+        </p>
+
+        <label for="LastName">Last Name</label>
+        <input
+          type="text"
+          name="LastName"
+          placeholder="Last Name"
+          id="LastName"
+          maxlength="15"
+        />
+        <!-- input elements display in line, so they will stack next to each other, should style with CSS -->
+        <br />
+        <label for="age">Your Age</label>
+        <input
+          type="number"
+          name="age"
+          placeholder="Age"
+          id="age"
+          min="0"
+          max="120"
+        />
+        <br />
+        <label for="password">Password</label>
+        <input type="password" name="password" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Text Are Tag</legend>
+        <p>
+          Text Areas are for longer text answers; sentences or long answers.
+        </p>
+        <label for="whyIDM">Why did you come to IDM?</label>
+        <textarea name="whyIDM" cols="50" rows="10"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Check Boxes</legend>
+        <p>
+          Check boxes allow user to select more than one option at once. Check
+          boxes all have the same name but different values! The value is what
+          is submitted by the form, not the text or picture or icon next to the
+          checkbox!
+        </p>
+        <label for="Pet">What pet(s) do you have?</label>
+        <br />
+        <input type="checkbox" name="Pet" value="dog" /> Dog
+        <input type="checkbox" name="Pet" value="cat" /> Cat
+        <input type="checkbox" name="Pet" value="fish" /> Fish
+        <input type="checkbox" name="Pet" value="chicken" /> Chicken
+        <input type="checkbox" name="Pet" value="cow" /> Cow
+      </fieldset>
+
+      <fieldset>
+        <legend>Radio Buttons</legend>
+        <p>
+          Radio fields allow the user to select only one option at once. Radio
+          fields all have same name but different values.
+        </p>
+        <label for="fav">What is your favorite pet?</label>
+        <br />
+        <input type="radio" name="Fav" value="dog" /> Dog
+        <input type="radio" name="Fav" value="cat" /> Cat
+        <input type="radio" name="Fav" value="fish" /> Fish
+        <input type="radio" name="Fav" value="chicken" /> Chicken
+        <input type="radio" name="Fav" value="cow" /> Cow
+      </fieldset>
+
+      <fieldset>
+        <legend>Select Options</legend>
+        <p>
+          Using select and option tags, can add and remove items from a dropdown
+        </p>
+        <lable for="state">Pick a State</lable>
+        <select name="state">
+          <option value="NY">NY</option>
+          <optgroup>
+            <option value="NJ">NJ</option>
+            <option value="CA">CA</option>
+          </optgroup>
+        </select>
+      </fieldset>
+      <p>Finally, we use a button to submit form</p>
+      <input name="submit" value="submit" type="button" disabled />
+      <button role="button">Submit</button>
+    </form>
+  </body>
+</html>
