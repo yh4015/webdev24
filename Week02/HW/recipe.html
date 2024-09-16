@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Teasther</title>
+    <meta name="description" content="Best Matcha Latte Recipe" />
+    <meta name="keywords" content="Tea, Matcha, Recipe, Latte" />
+    <meta name="author" content="Teasther" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        font-family: 'DotGothic16', Helvetica, Arial, sans-serif;
+        color:palevioletred;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        font-family: 'Arial';
+        color:rgb(0, 0, 0);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-left: 15px;
+      }
+
+      nav ul li a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+      }
+
+      hr {
+        border: 1px solid #ccc;
+        margin: 20px 0;
+      }
+
+      .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+      }
+
+      .recipe-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .recipe-info h2 {
+        font-size: 28px;
+        color: #2e8b57;
+        margin: 0;
+      }
+
+      .recipe-info img {
+        margin-left: 20px;
+        width: 300px;
+        height: auto;
+        border-radius: 5px;
+      }
+
+      .recipe-description {
+        font-size: 16px;
+        margin-top: 10px;
+      }
+
+      .main-content {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .ingredients,
+      .instructions {
+        width: 45%;
+      }
+
+      aside {
+        width: 30%;
+        background-color: #f0f0f0;
+        padding: 15px;
+        border-radius: 5px;
+      }
+
+      .ingredients ul,
+      .instructions ol {
+        padding-left: 20px;
+      }
+
+      aside h3 {
+        color: #03150b;
+        font-size: 20px;
+        margin-top: 0;
+      }
+
+      aside img {
+        width: 150px;
+        height: 100px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+
+      footer {
+        background-color: #2f4f4f;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+      }
+
+      footer ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 10px 0 0 0;
+      }
+
+      footer ul li {
+        display: inline;
+        margin-right: 10px;
+      }
+
+      footer ul li a {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Teasther</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Recipes</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr />
+
+    <!-- Recipe Title, Description, and Image -->
+    <div class="content-wrapper">
+      <div class="recipe-info">
+        <div>
+          <h2>The Best Matcha Latte Recipe</h2>
+          <p class="recipe-description">This creamy, delicious matcha latte will energize your mornings with its rich flavor and healthy benefits.</p>
+        </div>
+        <img src="img/OrganicMatchaLatte.jpg" alt="Matcha Latte Photo" />
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Ingredients, Instructions, and Other Recipes -->
+    <div class="main-content">
+      <!-- Ingredients Section -->
+      <div class="ingredients">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 tsp high-quality matcha powder</li>
+          <li>1 cup almond milk</li>
+          <li>1 tbsp honey or maple syrup</li>
+          <li>1/2 cup hot water</li>
+        </ul>
+      </div>
+
+      <!-- Instructions Section -->
+      <div class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+          <li>Whisk matcha powder with hot water until smooth.</li>
+          <li>Heat almond milk until warm.</li>
+          <li>Add honey or maple syrup to the milk.</li>
+          <li>Pour matcha mixture into the milk and whisk until frothy.</li>
+        </ol>
+      </div>
+
+      <!-- Aside Section with Other Recipes -->
+      <aside>
+        <h3>Other Recipes</h3>
+        <a href="#">
+          <img src="https://placehold.it/150x100" alt="Recipe 1" />
+          <p>AYR Matcha Black Latte</p>
+        </a>
+        <a href="#">
+          <img src="https://placehold.it/150x100" alt="Recipe 2" />
+          <p>Blended Tea Latte</p>
+        </a>
+        <a href="#">
+          <img src="https://placehold.it/150x100" alt="Recipe 3" />
+          <p>Green Tea Spread</p>
+        </a>
+        <a href="#">
+          <img src="https://placehold.it/150x100" alt="Recipe 4" />
+          <p>Tea Course Finger Foods</p>
+        </a>
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; Teasther 2024</p>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">TikTok</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
