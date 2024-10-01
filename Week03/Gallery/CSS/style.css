@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+/* font-family: "Kaushan Script", cursive; */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* full sized fixed centered background */
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  /* background-size: stretches image to cover whole screen */
+  background-size: cover;
+}
+
+/* apply default font style at body tag and all child elements will inherit it unless we override it with another style further down */
+body {
+  font-family: "Kaushan Script", cursive;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.polaroid {
+  width: 260px;
+  margin: 20px;
+  display: inline-block;
+  /* whenever you want a child element to position within a parent element, you have position the parent relatively */
+  position: relative;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  /* border shorthand -> 1. width, 2. style, 3. color */
+  border: 10px solid #ccc;
+  border-bottom-width: 45px;
+}
+
+.polaroid p {
+  font-size: 1rem;
+  position: absolute;
+  bottom: 14px;
+  width: 280px;
+  text-align: center;
+  color: #333;
+}
