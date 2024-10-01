@@ -1,0 +1,145 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Desktop First Design Pattern */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../img/seojin.jpg');
+    padding: 2rem;
+    position: relative;
+}
+
+.brand {
+    margin: 0;
+    font-weight: 300;
+}
+
+header a {
+    color: #05699b;
+    text-decoration: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.menu li {
+    min-width: 5rem;
+}
+
+.menu li a {
+    display: block;
+    padding: 1rem;
+}
+
+.menu li a:hover {
+    color: #EEE;
+    background-color: rgba(0,0,0,.3);
+}
+
+.container {
+    display: flex;
+    padding: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.thumb {
+    width: 23%;
+    margin: 2rem auto;
+}
+
+/* Media Queries */
+/* Note: if you style desktop first, need to use < #px in your media query */
+
+/* Tablet Sizes */
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: seagreen;
+    }
+
+    .thumb {
+        width: 45%;
+        margin: 1rem auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        background-color: pink;
+    }
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        padding: 0;
+    }
+
+    .brand {
+        margin: 0.5rem;
+    }
+
+    .mobile-menu {
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+        display: block;
+        font-size: 2rem;
+        color: #aaa;
+        cursor: pointer;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu li {
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .thumb {
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+}

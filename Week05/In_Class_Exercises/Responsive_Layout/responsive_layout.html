@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive 101</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <script>
+      function toggleMenu() {
+        
+        document.getElementById('main-nav').classList.toggle('hide')
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+        <h1 class="brand"><a href="#">Logo</a></h1>
+        <!-- hide on desktop, show on mobile-->
+        <span class="mobile-menu" onclick="toggleMenu()">&#8801;</span>
+        <nav id="main-nav">
+            <ul class="menu">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="thumb"><img src="./img/seojin.jpg"/></div>
+        <div class="thumb"><img src="./img/seojin.jpg"/></div>
+        <div class="thumb"><img src="./img/seojin.jpg"/></div>
+        <div class="thumb"><img src="./img/seojin.jpg"/></div>
+
+        <div class="thumb"><img src="./img/seojin.jpg"/></div>
+        <div class="thumb"><img src="./img/seojin.jpg"/></div>
+        <div class="thumb"><img src="./img/seojin.jpg"/></div>
+        <div class="thumb"><img src="./img/seojin.jpg"/></div>
+    </main>
+  </body>
