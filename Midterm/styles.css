@@ -1,0 +1,294 @@
+/* General Styles */
+body {
+    margin: 0; /* Remove default margin */
+    font-family: "Cabin Sketch", sans-serif; /* Set font family for the body */
+    font-weight: 400; /* Set normal font weight */
+    font-style: normal; /* Set normal font style */
+    background-color: white; /* Set background color to white */
+    cursor: url('flower.png'), auto; /* Custom cursor */
+}
+
+header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out logo and nav */
+    align-items: center; /* Center items vertically */
+    padding: 35px 35px; /* Padding for header */
+    padding-left: 75px; /* Ensure consistent padding on the left */
+    background-color: white; /* Background color for header */
+    border-bottom: 2px solid black; /* Bottom border for separation */
+    position: sticky; /* Sticky header */
+    top: 0; /* Position at the top */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.logo a {
+    font-size: 40px; /* Logo font size */
+    font-weight: bold; /* Bold font weight for logo */
+    color: black; /* Logo text color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+nav {
+    display: flex; /* Use flexbox for navigation */
+    align-items: center; /* Center items vertically in nav */
+    height: 100%; /* Ensures full height for alignment */
+}
+
+.nav-links {
+    display: flex; /* Use flexbox for nav links */
+    list-style-type: none; /* Remove default list styling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.nav-links li {
+    margin-left: 20px; /* Consistent spacing between nav items */
+    position: relative; /* Position relative for dropdown */
+    display: flex; /* Ensure each item can center contents */
+    align-items: center; /* Center the contents of each li */
+}
+
+.nav-links li a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Link text color */
+    font-size: 18px; /* Font size for links */
+    font-weight: bold; /* Keep bold text */
+    text-transform: uppercase; /* Transform text to uppercase */
+    display: flex; /* Make link a flex container */
+    align-items: center; /* Center align items within the link */
+    height: 100%; /* Ensures the link takes full height of li */
+}
+
+/* Remove hover and active styles for nav links */
+.nav-links li a:hover, 
+.nav-links li a:active {
+    color: black; /* Keep the same color on hover and active */
+}
+
+/* Instagram and Email logos */
+.nav-links img {
+    width: 40px; /* Adjust the width of icons */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align the image vertically */
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioning relative to parent */
+    background-color: white; /* Background color for dropdown */
+    right: 0; /* Align dropdown to the right */
+    top: 100%; /* Position below the parent link */
+    min-width: 150px; /* Minimum width of dropdown */
+    z-index: 1; /* Ensure dropdown appears above other content */
+}
+
+.dropdown-content a {
+    display: block; /* Block display for dropdown items */
+    padding: 10px; /* Space around dropdown items */
+    text-decoration: none; /* Remove underline */
+    color: black; /* Text color for dropdown items */
+    background-color: white; /* Background color for dropdown items */
+}
+
+/* Dropdown Hover Effect */
+.dropdown-content a:hover {
+    background-color: #c5e1a5; /* Change background on hover */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Display the dropdown when hovering over the parent */
+}
+
+/* Hamburger menu for mobile navigation */
+.hamburger {
+    display: none; /* Hide hamburger menu by default */
+    flex-direction: column; /* Stack lines vertically */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-left: 20px; /* Spacing to the left */
+    padding: 10px; /* Padding around hamburger */
+}
+
+.hamburger div {
+    width: 25px; /* Width of hamburger lines */
+    height: 3px; /* Height of hamburger lines */
+    background-color: black; /* Color of hamburger lines */
+    margin: 4px 0; /* Spacing between lines */
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide nav links on smaller screens */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .nav-active {
+        display: flex; /* Show active navigation */
+        flex-direction: column; /* Stack items vertically */
+        position: fixed; /* Fixed position on the screen */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: white; /* Background color for active nav */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        z-index: 9; /* Above other elements */
+    }
+
+    .nav-active a {
+        text-decoration: none; /* Remove underline from active nav links */
+        color: black; /* Text color */
+        font-size: 24px; /* Increased font size for visibility */
+        margin: 20px 0; /* Spacing between active nav items */
+    }
+
+    .businesses-link {
+        display: block; /* Ensures it's clickable */
+    }
+
+    .businesses-link:hover {
+        text-decoration: none; /* Remove hover effect */
+    }
+}
+
+/* Businesses page styles */
+.businesses-page {
+    display: none;
+    padding: 20px; /* Padding for pages */
+}
+
+.businesses-page a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Text color */
+    font-size: 24px; /* Font size for links */
+    margin: 20px 0; /* Spacing between links */
+}
+
+.businesses-link {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Text color */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Keep bold text */
+    text-transform: uppercase; /* Transform to uppercase */
+    display: flex; /* Make it a flex container */
+    align-items: center; /* Center align items within the link */
+    height: 100%; /* Ensures it takes full height */
+}
+
+/* Remove hover and active styles for businesses link */
+.businesses-link:hover,
+.businesses-link:active {
+    color: black; /* Keep the same color on hover */
+}
+
+.back-button {
+    position: absolute; /* Position relative to the parent */
+    margin-top: 20px; /* Space above the button */
+    left: 20px; /* Align to the left */
+    font-family: inherit; /* Inherit font from parent */
+    font-size: 18px; /* Font size */
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    color: black; /* Text color */
+}
+
+/* Featured Business styles */
+h1 {
+    text-align: left; /* Align title to the left */
+    margin: 40px 75px 0; /* Adjusted margin to reduce space above the section */
+    font-size: 40px; /* Font size for featured businesses title */
+    font-family: "Cabin Sketch", sans-serif; /* Font family */
+    font-weight: 400; /* Normal weight */
+    font-style: normal; /* Normal style */
+    color: #333; /* Dark gray for better contrast */
+}
+
+.page-title {
+    text-align: left; /* Align page title to the left */
+    margin: 30px 0 10px; /* Adjusted margin for spacing */
+    font-size: 40px; /* Font size for page titles */
+    font-family: "Cabin Sketch", sans-serif; /* Font family */
+    font-weight: 400; /* Normal weight */
+    font-style: normal; /* Normal style */
+    color: #333; /* Dark gray for better contrast */
+}
+
+.business-section {
+    display: flex; /* Use flexbox for layout to align business cards */
+    justify-content: space-between; /* Space out business cards evenly */
+    margin: 20px 75px; /* Set top/bottom margin to 20px and left/right to 75px for consistent spacing */
+    flex-wrap: wrap; /* Allow business cards to wrap onto the next line if necessary */
+}
+
+/* Individual Business Card Styles */
+/* Styles for each individual business card */
+.business-card {
+    position: relative; /* Position relative for child elements */
+    width: 49.5%; /* Responsive width to allow for two cards side by side with slight spacing */
+}
+
+/* Image within Business Card Styles */
+/* Styles for images within business cards */
+.business-card img {
+    width: 100%; /* Make the image fill the width of the card */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Prevent extra space caused by inline elements */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    border-radius: 15px; /* Round the corners of the image; adjust value for more/less rounding */
+}
+
+/* Caption Styles */
+/* Styles for the caption text below the business card image */
+.caption {
+    position: relative; /* Changed from absolute to relative to keep it within the card */
+    bottom: 0; /* Align the caption to the bottom of the card */
+    left: 0; /* Align to the left */
+    color: black; /* Set text color to black for contrast */
+    font-size: 18px; /* Font size for caption text */
+    background-color: transparent; /* No background for the caption */
+    padding: 5px 0; /* Padding for spacing above and below caption text */
+    font-family: "Cabin Sketch", sans-serif; /* Set font family for caption text */
+    font-weight: 400; /* Set normal font weight */
+    font-style: normal; /* Set normal font style */
+}
+
+/* Responsive Video Container Styles */
+/* Styles for a container holding a responsive video */
+.video-container {
+    position: relative; /* Position relative for inner elements */
+    width: 100%; /* Allow container to fill the width of the parent */
+    max-width: 560px; /* Set maximum width to prevent excessive stretching */
+    height: auto; /* Allow height to be defined by padding */
+    margin: 0 auto; /* Center the container within its parent */
+    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio for videos */
+}
+
+/* iFrame Styles within Video Container */
+/* Styles for iframe elements within the video container */
+.video-container iframe {
+    width: 100%; /* Make iframe fill the container */
+    height: 100%; /* Maintain the aspect ratio of the iframe */
+    border: 0; /* Remove default border around the iframe */
+}
+
+/* Centering Styles */
+/* Styles for centering elements */
+.center {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center items horizontally */
+    margin: 20px 0; /* Add margin above and below for spacing */
+}
+
+/* Centered Image Styles */
+/* Styles for images within centered elements */
+.center img {
+    border-radius: 15px; /* Round the corners of the image; adjust value for more/less rounding */
+}
