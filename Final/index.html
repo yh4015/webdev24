@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canon G7X Mark III Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
+    <!-- Link to an external CSS file for custom styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Background music setup -->
+    <!-- Audio element with a loop attribute to continuously play the background music -->
+    <audio id="background-music" loop>
+        <!-- Source file for the audio -->
+        <source src="../Final/sul.wav" type="audio/wav">
+        <!-- Fallback message for browsers that do not support the audio element -->
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Page header section -->
+    <header>
+        <!-- Main title of the portfolio page -->
+        <h1>Canon G7X Mark III Portfolio</h1>
+        <h3>Esther Hur</h3>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Gallery container where images will be dynamically added -->
+        <div id="gallery"></div>
+    </main>
+
+    <!-- Inline JavaScript for background music functionality -->
+    <script>
+        // Function to toggle play/pause for background music
+        window.onload = function() {
+            const music = document.getElementById('background-music');
+
+            // Show an alert popup when the page loads
+            alert("Click Anywhere :-)");
+
+            // Ensure the music is paused when the page loads
+            music.pause();
+
+            // Add an event listener to the entire page to toggle play/pause when clicked
+            document.body.addEventListener('click', function() {
+                if (music.paused) {
+                    // Attempt to play the music and handle any playback errors
+                    music.play().catch(function(error) {
+                        console.log("Audio play failed:", error);
+                        alert('Enjoy with Music at Top Left');
+                    });
+                } else {
+                    // Pause the music if it's currently playing
+                    music.pause();
+                }
+            });
+        };
+    </script>
+
+    <!-- Link to an external JavaScript file for additional scripts -->
+    <script src="js/scripts.js" defer></script>
+</body>
+</html>
